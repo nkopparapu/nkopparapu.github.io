@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shiny Stocks US</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Shiny Stocks US">
+  <meta name="author" content="Ken Kopparapu">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Shiny Stocks US</h1>
+    <h2>A sample app to demo the power of Shiny</h2>
+    <p>Ken Kopparapu<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Shiny Stocks US</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This application shows the details of the listed US stocks using Shiny web application frame work and R</p>
+
+<p>This is a simple application that loads information about all listed stocks on NYSE, NASDAQ, AMEX.</p>
+
+<p>You can view all the stocks by Exchange and industry </p>
+
+<p>or </p>
+
+<p>if you know the ticker, you can get the details of the stock by entering the ticker</p>
+
+<p>The underlying is downloaded from nasdaq website. For example the stocks listed on AMEX are downloaded using the following url </p>
+
+<p><a href="http://www.nasdaq.com/screening/companies-by-industry.aspx?exchange=AMEX&amp;render=download">http://www.nasdaq.com/screening/companies-by-industry.aspx?exchange=AMEX&amp;render=download</a>&quot;</p>
+
+<p>Any stocks with a market cap of 0 are removed from the dataset.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Shiny stocks trivia</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>[1] &quot;Number of stock listings by Exchange&quot;</p>
+
+<!-- html table generated in R 3.1.0 by xtable 1.7-3 package -->
+
+<!-- Sun Jun 22 16:46:35 2014 -->
+
+<TABLE border=1>
+<TR> <TH>  </TH> <TH> Exch </TH> <TH> Count </TH>  </TR>
+  <TR> <TD align="right"> 1 </TD> <TD> AMEX </TD> <TD align="right"> 375 </TD> </TR>
+  <TR> <TD align="right"> 2 </TD> <TD> NASDAQ </TD> <TD align="right"> 2743 </TD> </TR>
+  <TR> <TD align="right"> 3 </TD> <TD> NYSE </TD> <TD align="right"> 2564 </TD> </TR>
+   </TABLE>
+
+<p><br>
+<br></p>
+
+<pre><code>## [1] &quot;These listed stocks are divided in to  13 sectors&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Number of industries</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>## [1] &quot;Did you know the US listed stocks are broken in to  137 industries ?&quot;
+</code></pre>
+
+<p><br>
+<br>
+Shiny Stocks makes it easy to see all the stocks for each industry by exchange.
+<br>
+<br>
+This is very useful when you are researching about a stock and others in the group</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Shiny Stocks - next steps</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br>
+<br></p>
+
+<p>This applications will be enhanced to show the historical prices, dividend information, technical indicators, news</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Shiny Stocks US'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Shiny stocks trivia'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Number of industries'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Shiny Stocks - next steps'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

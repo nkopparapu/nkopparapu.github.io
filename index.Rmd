@@ -1,0 +1,90 @@
+---
+title       : Shiny Stocks US 
+subtitle    : A sample app to demo the power of Shiny
+author      : Ken Kopparapu
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Shiny Stocks US
+
+
+This application shows the details of the listed US stocks using Shiny web application frame work and R
+
+This is a simple application that loads information about all listed stocks on NYSE, NASDAQ, AMEX.
+
+You can view all the stocks by Exchange and industry 
+
+or 
+
+if you know the ticker, you can get the details of the stock by entering the ticker
+
+The underlying is downloaded from nasdaq website. For example the stocks listed on AMEX are downloaded using the following url 
+
+http://www.nasdaq.com/screening/companies-by-industry.aspx?exchange=AMEX&render=download"
+
+Any stocks with a market cap of 0 are removed from the dataset.
+
+--- .class #id 
+
+## Shiny stocks trivia
+
+```{r echo=FALSE, results='asis'}
+library(plyr)
+library(xtable)
+#Do you know how many stocks are listed on each Exchange?
+stocks = read.csv("UsStocks.csv")
+exchCount = count(stocks,"Exch")
+colnames(exchCount) = c("Exch","Count")
+ind = unique(stocks$Industry)
+ind = ind[order(ind)]
+sectors = unique(stocks$Sector)
+sectors = sectors[order(sectors)]
+```
+
+```{r echo=FALSE, results='asis'}
+print("Number of stock listings by Exchange")
+print(xtable(exchCount), type = "html")
+#plot(exchCount, pin=2)
+```
+
+<br>
+<br>
+
+
+```{r echo=FALSE}
+paste ("These listed stocks are divided in to ", length(sectors), "sectors" )
+```
+
+
+--- .class #id 
+
+## Number of industries 
+
+
+
+```{r echo=FALSE}
+paste("Did you know the US listed stocks are broken in to ",length(ind),"industries ?")
+```
+<br>
+<br>
+Shiny Stocks makes it easy to see all the stocks for each industry by exchange.
+<br>
+<br>
+This is very useful when you are researching about a stock and others in the group
+
+
+--- .class #id 
+
+## Shiny Stocks - next steps 
+
+<br>
+<br>
+
+This applications will be enhanced to show the historical prices, dividend information, technical indicators, news
+ 
